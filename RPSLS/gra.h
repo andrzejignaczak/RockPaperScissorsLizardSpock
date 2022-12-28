@@ -229,11 +229,11 @@ namespace RPSLS {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->label2->Location = System::Drawing::Point(474, 276);
+			this->label2->Location = System::Drawing::Point(519, 276);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(138, 36);
+			this->label2->Size = System::Drawing::Size(57, 36);
 			this->label2->TabIndex = 8;
-			this->label2->Text = L"Komputer";
+			this->label2->Text = L"A.I.";
 			// 
 			// lblLicznikG
 			// 
@@ -274,12 +274,13 @@ namespace RPSLS {
 			this->reset->Enabled = false;
 			this->reset->Font = (gcnew System::Drawing::Font(L"Calibri", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->reset->Location = System::Drawing::Point(285, 69);
+			this->reset->Location = System::Drawing::Point(285, 233);
 			this->reset->Name = L"reset";
 			this->reset->Size = System::Drawing::Size(130, 40);
 			this->reset->TabIndex = 12;
 			this->reset->Text = L"Reset";
 			this->reset->UseVisualStyleBackColor = true;
+			this->reset->Visible = false;
 			this->reset->Click += gcnew System::EventHandler(this, &gra::reset_Click);
 			// 
 			// newGame
@@ -287,12 +288,13 @@ namespace RPSLS {
 			this->newGame->Enabled = false;
 			this->newGame->Font = (gcnew System::Drawing::Font(L"Calibri", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->newGame->Location = System::Drawing::Point(285, 23);
+			this->newGame->Location = System::Drawing::Point(285, 187);
 			this->newGame->Name = L"newGame";
 			this->newGame->Size = System::Drawing::Size(130, 40);
 			this->newGame->TabIndex = 13;
 			this->newGame->Text = L"New Game";
 			this->newGame->UseVisualStyleBackColor = true;
+			this->newGame->Visible = false;
 			this->newGame->Click += gcnew System::EventHandler(this, &gra::newGame_Click);
 			// 
 			// label1
@@ -320,11 +322,11 @@ namespace RPSLS {
 			// 
 			this->changeName->Font = (gcnew System::Drawing::Font(L"Calibri", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->changeName->Location = System::Drawing::Point(291, 115);
+			this->changeName->Location = System::Drawing::Point(285, 23);
 			this->changeName->Name = L"changeName";
-			this->changeName->Size = System::Drawing::Size(118, 88);
+			this->changeName->Size = System::Drawing::Size(130, 40);
 			this->changeName->TabIndex = 15;
-			this->changeName->Text = L"Change player name";
+			this->changeName->Text = L"Player name";
 			this->changeName->UseVisualStyleBackColor = true;
 			this->changeName->Click += gcnew System::EventHandler(this, &gra::changeName_Click);
 			// 
@@ -358,6 +360,7 @@ namespace RPSLS {
 			// 
 			// txtWynik
 			// 
+			this->txtWynik->BackColor = System::Drawing::Color::CadetBlue;
 			this->txtWynik->Enabled = false;
 			this->txtWynik->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
@@ -594,7 +597,8 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	spock->Enabled = true;
 	reset->Enabled = true;
 	newGame->Enabled = true;
-
+	reset->Visible = true;
+	newGame->Visible = true;
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	help^ Onas = gcnew help();

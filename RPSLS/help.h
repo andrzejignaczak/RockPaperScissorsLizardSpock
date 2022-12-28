@@ -101,6 +101,8 @@ namespace RPSLS {
 			this->Controls->Add(this->richTextBox2);
 			this->Controls->Add(this->richTextBox1);
 			this->Controls->Add(this->pictureBox1);
+			this->MaximizeBox = false;
+			this->MinimizeBox = false;
 			this->Name = L"help";
 			this->Text = L"Help";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
